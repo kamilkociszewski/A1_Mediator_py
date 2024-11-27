@@ -31,10 +31,7 @@ run xApp:
 | DELETE     | /a1-p/policytypes/{policy_type_id}/policies/{policy_instance_id} | Delete Policy Instance        |
 | GET        | /a1-p/policytypes/{policy_type_id}/policies/{policy_instance_id}/status | Get Policy Instance Status    |
 | GET        | /a1-p/policytypes/{policy_type_id}/policies                 | List Policy Instances         |
-| GET        | /                                                           | Read Root                     |
-| POST       | /a1-p/policytypes/create/{policy_type_id}                   | Create Policy                 |
-| POST       | /a1-p/policytypes/update/{policy_type_id}/{threshold}       | Update Policy                 |
-| DELETE     | /a1-p/policytypes/delete/{policy_type_id}                   | Delete Policy                 |
+
 
 
 ## Contributers
