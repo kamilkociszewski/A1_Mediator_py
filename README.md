@@ -11,13 +11,31 @@ type in browser: (host_ip):9000/docs #to see available APIs
 
 ## Run test xApp with FlexRIC
 ```
-build FlexRIC following main repo instructions
+use local FlexRIC build
+build FlexRIC following repo instructions
 run RIC with: 
-./flexric-a1-xapp/build/examples/ric/nearRT-RIC
+./flexric-a1-xapp-A1_integration_RIC_TaaP/build/examples/ric/nearRT-RIC
 run ns3 with nearRT-RIC connection
 run xApp:
-./flexric-a1-xapp/build/examples/xApp/c/kpm_rc_A1/xapp_kpm_rc_a1
+./flexric-a1-xapp-A1_integration_RIC_TaaP/build/examples/xApp/c/kpm_rc_A1/xapp_kpm_rc_a1
 ```
+
+## Supported API calls
+| **Method** | **Endpoint**                                                | **Description**                |
+|------------|-------------------------------------------------------------|--------------------------------|
+| GET        | /a1-p/policytypes                                           | Get All Policy Types          |
+| GET        | /a1-p/policytypes/{policy_type_id}                          | Get Policy Type               |
+| PUT        | /a1-p/policytypes/{policy_type_id}                          | Create Policy Type            |
+| DELETE     | /a1-p/policytypes/{policy_type_id}                          | Delete Policy Type            |
+| PUT        | /a1-p/policytypes/{policy_type_id}/policies/{policy_instance_id} | Create Policy Instance        |
+| DELETE     | /a1-p/policytypes/{policy_type_id}/policies/{policy_instance_id} | Delete Policy Instance        |
+| GET        | /a1-p/policytypes/{policy_type_id}/policies/{policy_instance_id}/status | Get Policy Instance Status    |
+| GET        | /a1-p/policytypes/{policy_type_id}/policies                 | List Policy Instances         |
+| GET        | /                                                           | Read Root                     |
+| POST       | /a1-p/policytypes/create/{policy_type_id}                   | Create Policy                 |
+| POST       | /a1-p/policytypes/update/{policy_type_id}/{threshold}       | Update Policy                 |
+| DELETE     | /a1-p/policytypes/delete/{policy_type_id}                   | Delete Policy                 |
+
 
 ## Contributers
 - Jerzy Jegier, Orange Innovation Poland, jerzy.jegier@orange.com
