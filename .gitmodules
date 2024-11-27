@@ -1,0 +1,4 @@
+[submodule "flexric-a1-xapp"]
+	path = flexric-a1-xapp
+	url = https://gitlab.eurecom.fr/Kociszz/flexric-a1-xapp.git
+	branch = A1_integration_RIC_TaaP
