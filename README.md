@@ -6,17 +6,17 @@ cd A1_Mediator
 pip3 install -r requirements.txt
 cd app
 python3 main.py
-(host_ip):9000/docs #to see available APIs
+type in browser: (host_ip):9000/docs #to see available APIs
 ```
 
-## Run C test app
+## Run test xApp with FlexRIC
 ```
-cd C_Test_app
-sudo apt-get install libcurl4-openssl-dev
-sudo apt-get install libjsoncpp-dev
-g++ -o api_xapp main.cpp -lcurl -ljsoncpp
-
-./api_xapp
+build FlexRIC following main repo instructions
+run RIC with: 
+./flexric-a1-xapp/build/examples/ric/nearRT-RIC
+run ns3 with nearRT-RIC connection
+run xApp:
+./flexric-a1-xapp/build/examples/xApp/c/kpm_rc_A1/xapp_kpm_rc_a1
 ```
 
 ## Contributers
